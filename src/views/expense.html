@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/">Home</a>
+            <a class="nav-item nav-link" href="/income">Incomes</a>
+            <a class="nav-item nav-link active" href="/expense">Expenses</a>
+            <a class="nav-item nav-link" href="/summary">Summary</a>
+          </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="title">My Expenses</h1>
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Reason</th>
+                <th scope="col">Amount [$]</th>
+                <th scope="col">Date</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <form>
+                        <td scope="row">Add new Expense</td>
+                        <td class="form-group">
+                          <input type="text" class="form-control" id="expenseInput" placeholder="Enter new expense">
+                        </td>
+                        <td class="form-group">
+                          <input type="number" class="form-control" id="amountInput" placeholder="Enter amount of new expense">
+                        </td>
+                        <td><button type="submit" class="btn btn-primary">Submit</button></td>
+                    </form>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="js/request.js"></script>
+    <script src="js/expense.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

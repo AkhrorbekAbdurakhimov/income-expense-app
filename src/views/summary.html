@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/">Home</a>
+            <a class="nav-item nav-link" href="/income">Incomes</a>
+            <a class="nav-item nav-link" href="/expense">Expenses</a>
+            <a class="nav-item nav-link active" href="/summary">Summary</a>
+          </div>
+        </div>
+    </nav>
+    <div class="container">
+      <h1>Summary</h1>
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Total Income [$]</th>
+                <th scope="col">Total Expense [$]</th>
+                <th scope="col">Total [$]</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <tr>
+                <td id="totalIncome"></td>
+                <td id="totalExpense"></td>
+                <td id="total"></td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/request.js"></script>
+    <script src="js/summary.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
