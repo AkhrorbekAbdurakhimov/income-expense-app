@@ -1,14 +1,11 @@
-const express = require('express')
-const {GET, POST, DELETE, PUT, EXPENSES} = require('./controller')
+const expenseRoute = require('express').Router()
+const {GET, POST, DELETE} = require('./controller')
 
-const expenseRoute = express.Router()
 expenseRoute.route('/expense')
     .get(GET)
     .post(POST)
-    .delete(DELETE)
-    .put(PUT)
 
-expenseRoute.route('/expenses')
-    .get(EXPENSES)
+expenseRoute.route('/expense/delete/:expenseId')
+    .get(DELETE)
 
 module.exports = expenseRoute

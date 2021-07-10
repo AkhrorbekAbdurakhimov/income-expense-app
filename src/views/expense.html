@@ -36,16 +36,27 @@
               </tr>
             </thead>
             <tbody id="tbody">
+              <% for (let i in expenses) { %>
+                <tr>
+                  <td><%= Number(i) + 1 %></td>
+                  <td><%= expenses[i].reason %></td>
+                  <td><%= expenses[i].amount %></td>
+                  <td><%= expenses[i].date %></td>
+                  <td><a href="/expense/delete/<%= expenses[i].id%>">
+                    <span class="fas fa-trash-alt"></span>
+                  </a></td>
+                </tr>
+              <% } %>
             </tbody>
             <tfoot>
                 <tr>
-                    <form>
+                    <form action="/expense" method="POST">
                         <td scope="row">Add new Expense</td>
                         <td class="form-group">
-                          <input type="text" class="form-control" id="expenseInput" placeholder="Enter new expense">
+                          <input type="text" name="reason" class="form-control" id="expenseInput" placeholder="Enter new expense">
                         </td>
                         <td class="form-group">
-                          <input type="number" class="form-control" id="amountInput" placeholder="Enter amount of new expense">
+                          <input type="number" name="amount" class="form-control" id="amountInput" placeholder="Enter amount of new expense">
                         </td>
                         <td><button type="submit" class="btn btn-primary">Submit</button></td>
                     </form>
@@ -53,8 +64,6 @@
             </tfoot>
         </table>
     </div>
-    <script src="js/request.js"></script>
-    <script src="js/expense.js"></script>
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

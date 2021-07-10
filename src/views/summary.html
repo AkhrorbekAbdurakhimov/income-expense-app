@@ -34,15 +34,13 @@
             </thead>
             <tbody id="tbody">
               <tr>
-                <td id="totalIncome"></td>
-                <td id="totalExpense"></td>
-                <td id="total"></td>
+                <td id="totalIncome"><%= total[0].total_income %></td>
+                <td id="totalExpense"><%= total[1].total_expense %></td>
+                <td id="total"><%= total[2] %></td>
               </tr>
             </tbody>
         </table>
     </div>
-    <script src="js/request.js"></script>
-    <script src="js/summary.js"></script>
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

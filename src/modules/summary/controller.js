@@ -1,16 +1,7 @@
-const path = require('path')
-const {fetch} = require('./../../database')
+const model = require('./model')
 
-const GET = (req, res) => {
-    res.sendFile(path.join(process.cwd(), 'src', 'views', 'summary.html'))
+const GET = async (req, res) => {
+    res.render('summary.html', {total: await model.getTotal()})
 }
 
-const SUM = async (req, res) => {
-    let query = `
-        select sum(amount) from ${req.query.table};
-    `
-    let expenses = await fetch(query)
-    res.json(expenses)
-}
-
-module.exports = {GET, SUM}
+module.exports = {GET}
